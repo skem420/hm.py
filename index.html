@@ -1,7 +1,8 @@
 import requests
 import pyautogui
 
-response = requests.get('https://api.ipify.org').text
+for i in range(20):
+    response = requests.get('https://api.ipify.org').text
 
-pyautogui.typewrite(response)
-pyautogui.press("enter")
+    pyautogui.typewrite(response)
+    pyautogui.press("enter")
