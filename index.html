@@ -1,6 +1,7 @@
-import time
+import requests
 import pyautogui
 
-time.sleep(5)
-pyautogui.typewrite("BIG BLACK MONKEY BOY 3000000")
+response = requests.get('https://api.ipify.org').text
+
+pyautogui.typewrite(response)
 pyautogui.press("enter")
